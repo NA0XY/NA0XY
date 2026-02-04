@@ -1,6 +1,4 @@
-# <img src="https://media.giphy.com/media/l0HlHfrbY87tPtEHK/giphy.gif" width="100%" alt="Retro Game Header">
-
-# Hi there, I'm Harsh Singhal! 👋
+# ![Header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Harsh%20Singhal&desc=Machine%20Learning%20%7C%20Full%20Stack%20%7C%20Systems&fontSize=70)
 
 I'm a passionate developer interested in **Machine Learning**, **Full Stack Development (Java, Node/Express, Flutter)**, and **Systems Programming**.
 
@@ -23,4 +21,4 @@ I'm a passionate developer interested in **Machine Learning**, **Full Stack Deve
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 ## 📈 GitHub Stats
-![Harsh's GitHub stats](https://github-readme-stats.vercel.app/api?username=NA0XY&show_icons=true&theme=radical)
+![Harsh's GitHub stats](https://streak-stats.demolab.com/?user=NA0XY&theme=radical)
