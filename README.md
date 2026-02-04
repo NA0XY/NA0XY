@@ -1,3 +1,5 @@
+# <img src="https://media.giphy.com/media/l0HlHfrbY87tPtEHK/giphy.gif" width="100%" alt="Retro Game Header">
+
 # Hi there, I'm Harsh Singhal! 👋
 
 I'm a passionate developer interested in **Machine Learning**, **Full Stack Development (Java, Node/Express, Flutter)**, and **Systems Programming**.
@@ -8,8 +10,6 @@ I'm a passionate developer interested in **Machine Learning**, **Full Stack Deve
 - **[os1](https://github.com/NA0XY/os1)**: Operating System concepts implementation.
 
 ## 🛠️ Tech Stack
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -19,10 +19,8 @@ I'm a passionate developer interested in **Machine Learning**, **Full Stack Deve
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-## 🕹️ Breakout
-![Breakout Game](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Z5eXF4a3owZ3Z5eXF4a3owZ3Z5eXF4a3owZ3Z5eXF4a3oweiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt4j96fQ4j96fQ4/giphy.gif)
-*(Classic Brick Breaker style)*
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 ## 📈 GitHub Stats
 ![Harsh's GitHub stats](https://github-readme-stats.vercel.app/api?username=NA0XY&show_icons=true&theme=radical)
