@@ -1,5 +1,8 @@
-# <img src="https://media.giphy.com/media/QvBoDdJg9Z2y4/giphy.gif" width="100%" alt="Space Shooter Header">
-
+# 
+ My GitHub Activity Game
+<p align="center">
+  <img src="assets/space-shooter.gif" />
+</p>
 I'm a passionate developer interested in **Machine Learning**, **Full Stack Development (Java, Node/Express, Flutter)**, and **Systems Programming**.
 
 ## 🚀 Projects
