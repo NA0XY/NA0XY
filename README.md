@@ -1,4 +1,4 @@
-# ![Header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Harsh%20Singhal&desc=Machine%20Learning%20%7C%20Full%20Stack%20%7C%20Systems&fontSize=70)
+# <img src="https://media.giphy.com/media/QvBoDdJg9Z2y4/giphy.gif" width="100%" alt="Space Shooter Header">
 
 I'm a passionate developer interested in **Machine Learning**, **Full Stack Development (Java, Node/Express, Flutter)**, and **Systems Programming**.
 
