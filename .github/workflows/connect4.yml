@@ -1,0 +1,36 @@
+name: Connect Four Game
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  play:
+    if: startsWith(github.event.issue.title, 'connect4|')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Play Game
+        run: |
+          # Extract column from title "connect4|drop|3" -> 3
+          TITLE="${{ github.event.issue.title }}"
+          COL=$(echo "$TITLE" | cut -d'|' -f3)
+          python scripts/connect4.py "$COL"
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "Connect4 Bot"
+          git config --global user.email "bot@example.com"
+          git add data/board.json connect4.svg
+          git commit -m "Update Connect 4 Board" || exit 0
+          git push
+
+      - name: Close Issue
+        uses: peter-evans/close-issue@v3
