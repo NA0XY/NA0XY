@@ -3,7 +3,7 @@
 <p align="center">
   <img src="assets/space-shooter.gif" />
 </p>
-I'm a passionate developer interested in **Machine Learning**, **Full Stack Development (Java, Node/Express, Flutter)**, and **Systems Programming**.
+I'm a passionate developer interested in Machine Learning, Full Stack Development (Java, Node/Express, Flutter), and Systems Programming.
 
 ## 🚀 Projects
 - **[Bangalore Urban Flooding GEE](https://github.com/NA0XY/bangalore-urban-flooding-gee)**: Analyzing urban flooding patterns using Google Earth Engine.
