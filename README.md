@@ -127,8 +127,8 @@ I'm a passionate developer building at the intersection of **AI**, **full-stack 
 
 **Let's connect and build something great together.**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=e8c840&labelColor=0d1117)](https://linkedin.com/in/)
-[![Email](https://img.shields.io/badge/Email-0d1117?style=for-the-badge&logo=gmail&logoColor=6ee7b7&labelColor=0d1117)](mailto:)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=e8c840&labelColor=0d1117)](https://linkedin.com/in/harshsinghal04)
+[![Email](https://img.shields.io/badge/Email-0d1117?style=for-the-badge&logo=gmail&logoColor=6ee7b7&labelColor=0d1117)](mailto:harshsinghal1972@gmail.com)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a1a00,50:151000,100:0a0a0a&height=120&section=footer" width="100%" />
 
