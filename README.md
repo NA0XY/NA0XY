@@ -177,9 +177,9 @@ DataReaper hunts down your exposed personal data across the web and forces its d
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=NA0XY&show_icons=true&theme=github_dark&bg_color=0d1117&border_color=30363d&title_color=e8c840&icon_color=6ee7b7&text_color=9ca3af&hide_border=false&rank_icon=github&include_all_commits=true&count_private=true" height="180" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=NA0XY&theme=github_dark" height="180" />
 &nbsp;&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NA0XY&layout=compact&theme=github_dark&bg_color=0d1117&border_color=30363d&title_color=e8c840&icon_color=6ee7b7&text_color=9ca3af&langs_count=8" height="180" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=NA0XY&theme=github_dark" height="180" />
 
 <br /><br />
 
