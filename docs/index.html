@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsh Singhal — README</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Archivo', sans-serif;
+  background: #e6e1d8;
+  min-height: 100vh;
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.readme {
+  width: 100%;
+  max-width: 920px;
+  background: #f7f3ee;
+  border: 2.5px solid #1a1a1a;
+  overflow: hidden;
+}
+
+/* PRIMITIVES */
+.ab { font-family: 'Archivo Black', sans-serif; }
+.mono { font-family: 'DM Mono', monospace; }
+.label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aaa;
+  font-weight: 400;
+  font-family: 'DM Mono', monospace;
+}
+.red { color: #e8272b; }
+.flex { display: flex; }
+.bb { border-bottom: 2.5px solid #1a1a1a; }
+.br { border-right: 2.5px solid #1a1a1a; }
+.bt { border-top: 2.5px solid #1a1a1a; }
+
+/* MARQUEE */
+.marquee-track { background: #e8272b; overflow: hidden; padding: 9px 0; }
+.marquee-inner {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: ticker 22s linear infinite;
+}
+@keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.m-item {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: #f7f3ee;
+  text-transform: uppercase;
+  padding: 0 28px;
+}
+.m-sep { color: rgba(247,243,238,0.35); padding: 0; }
+
+/* SECTION HEADER BAR */
+.sec-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 20px;
+  border-bottom: 2.5px solid #1a1a1a;
+  border-top: 2.5px solid #1a1a1a;
+}
+.sec-bar-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+.sec-bar-line { flex: 1; height: 1px; background: #d8d2c8; }
+
+/* PROJECT TAGS */
+.tag {
+  display: inline-block;
+  border: 1.5px solid #c8c2b8;
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  padding: 3px 10px;
+  color: #444;
+  margin: 2px 2px 0 0;
+  letter-spacing: 0.04em;
+}
+.tag-dark {
+  display: inline-block;
+  border: 1.5px solid #1a1a1a;
+  background: #1a1a1a;
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  padding: 3px 10px;
+  color: #f7f3ee;
+  margin: 2px 2px 0 0;
+  letter-spacing: 0.04em;
+}
+
+/* PROJECT CARD */
+.proj-num {
+  font-family: 'Archivo Black', sans-serif;
+  color: #e8272b;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.proj-ghost {
+  position: absolute;
+  font-family: 'Archivo Black', sans-serif;
+  color: rgba(232,39,43,0.045);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+  user-select: none;
+}
+.proj-name {
+  font-family: 'Archivo Black', sans-serif;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+.proj-link {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1.5px solid #e8272b;
+  padding-bottom: 1px;
+}
+.proj-link:hover { color: #e8272b; }
+
+/* STAT MINI */
+.mini-stat {
+  border: 1.5px solid #ddd8ce;
+  padding: 8px 14px;
+  flex: 1;
+  text-align: center;
+}
+.mini-stat-val {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1;
+}
+.mini-stat-val.accent { color: #e8272b; }
+
+/* STACK */
+.stack-col { padding: 16px 18px; border-right: 2.5px solid #1a1a1a; }
+.stack-col:last-child { border-right: none; }
+.stack-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  font-weight: 300;
+  color: #555;
+  line-height: 2.3;
+}
+.stack-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #e8272b;
+  flex-shrink: 0;
+}
+
+/* CONTACT LINK */
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-family: 'DM Mono', monospace;
+  font-weight: 300;
+  color: #333;
+  text-decoration: none;
+  padding: 9px 0;
+  border-bottom: 1px solid #e6e0d6;
+}
+.contact-link:last-child { border-bottom: none; }
+.contact-link:hover { color: #e8272b; }
+.contact-arrow {
+  font-family: 'Archivo Black', sans-serif;
+  color: #e8272b;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* VERTICAL TEXT */
+.vert {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+</style>
+</head>
+<body>
+<div class="readme">
+
+  <!-- ── MARQUEE ───────────────────────────────────────────────── -->
+  <div class="marquee-track">
+    <div class="marquee-inner">
+      <span class="m-item">GenAI Engineer</span><span class="m-sep">✦</span>
+      <span class="m-item">Full Stack Dev</span><span class="m-sep">✦</span>
+      <span class="m-item">ML Research</span><span class="m-sep">✦</span>
+      <span class="m-item">Open to Collab</span><span class="m-sep">✦</span>
+      <span class="m-item">Building in Public</span><span class="m-sep">✦</span>
+      <span class="m-item">Bengaluru, India</span><span class="m-sep">✦</span>
+      <span class="m-item">Agentic Systems</span><span class="m-sep">✦</span>
+      <span class="m-item">RAG Pipelines</span><span class="m-sep">✦</span>
+      <span class="m-item">Privacy Tools</span><span class="m-sep">✦</span>
+      <span class="m-item">Trading Bots</span><span class="m-sep">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span class="m-item">GenAI Engineer</span><span class="m-sep">✦</span>
+      <span class="m-item">Full Stack Dev</span><span class="m-sep">✦</span>
+      <span class="m-item">ML Research</span><span class="m-sep">✦</span>
+      <span class="m-item">Open to Collab</span><span class="m-sep">✦</span>
+      <span class="m-item">Building in Public</span><span class="m-sep">✦</span>
+      <span class="m-item">Bengaluru, India</span><span class="m-sep">✦</span>
+      <span class="m-item">Agentic Systems</span><span class="m-sep">✦</span>
+      <span class="m-item">RAG Pipelines</span><span class="m-sep">✦</span>
+      <span class="m-item">Privacy Tools</span><span class="m-sep">✦</span>
+      <span class="m-item">Trading Bots</span><span class="m-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ── HEADER ────────────────────────────────────────────────── -->
+  <div class="flex bb">
+    <div style="flex:1; padding: 22px 26px 0;">
+      <div class="label" style="margin-bottom:10px;">Developer Profile · 2025</div>
+      <div class="ab" style="font-size:84px; line-height:0.84; letter-spacing:-0.04em; text-transform:uppercase; color:#1a1a1a;">
+        HARSH<br>SINGHAL
+      </div>
+      <div class="flex bb" style="margin-top:18px; border-top:2.5px solid #1a1a1a; margin-left:-26px; margin-right:0; padding-left:26px;">
+        <div style="padding:10px 20px 10px 0; border-right:2.5px solid #1a1a1a; margin-right:20px;">
+          <div class="label" style="margin-bottom:4px;">Role</div>
+          <div style="font-size:13px; font-weight:500; line-height:1.5;">GenAI · Full Stack · ML Engineer</div>
+        </div>
+        <div style="padding:10px 20px 10px 0; border-right:2.5px solid #1a1a1a; margin-right:20px;">
+          <div class="label" style="margin-bottom:4px;">Status</div>
+          <div style="font-size:12px; font-weight:500; color:#e8272b;">Open to collab</div>
+        </div>
+        <div style="padding:10px 0;">
+          <div class="label" style="margin-bottom:4px;">Based in</div>
+          <div style="font-size:12px; font-weight:400; color:#555;">Bengaluru, India</div>
+        </div>
+      </div>
+    </div>
+    <!-- red vertical strip -->
+    <div style="background:#e8272b; min-width:54px; display:flex; align-items:center; justify-content:center; border-left:2.5px solid #1a1a1a;">
+      <div class="vert ab" style="font-size:9px; letter-spacing:0.28em; color:#f7f3ee; text-transform:uppercase;">
+        Building · Shipping · Breaking
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ─────────────────────────────────────────────────── -->
+  <div class="flex bb">
+    <!-- left: obsessions list -->
+    <div style="width:210px; min-width:210px; padding:20px 18px; border-right:2.5px solid #1a1a1a;">
+      <div class="label" style="margin-bottom:14px;">What I obsess over</div>
+      <div>
+        <div class="flex" style="align-items:baseline; gap:10px; padding:8px 0; border-bottom:1px solid #e6e0d6;">
+          <span class="ab red" style="font-size:18px; line-height:1;">—</span>
+          <span style="font-size:12px; font-weight:300; color:#333;">Agentic systems</span>
+        </div>
+        <div class="flex" style="align-items:baseline; gap:10px; padding:8px 0; border-bottom:1px solid #e6e0d6;">
+          <span class="ab red" style="font-size:18px; line-height:1;">—</span>
+          <span style="font-size:12px; font-weight:300; color:#333;">Algorithmic trading</span>
+        </div>
+        <div class="flex" style="align-items:baseline; gap:10px; padding:8px 0; border-bottom:1px solid #e6e0d6;">
+          <span class="ab red" style="font-size:18px; line-height:1;">—</span>
+          <span style="font-size:12px; font-weight:300; color:#333;">Privacy infrastructure</span>
+        </div>
+        <div class="flex" style="align-items:baseline; gap:10px; padding:8px 0; border-bottom:1px solid #e6e0d6;">
+          <span class="ab red" style="font-size:18px; line-height:1;">—</span>
+          <span style="font-size:12px; font-weight:300; color:#333;">RAG pipelines</span>
+        </div>
+        <div class="flex" style="align-items:baseline; gap:10px; padding:8px 0; border-bottom:1px solid #e6e0d6;">
+          <span class="ab red" style="font-size:18px; line-height:1;">—</span>
+          <span style="font-size:12px; font-weight:300; color:#333;">Dev tooling</span>
+        </div>
+        <div class="flex" style="align-items:baseline; gap:10px; padding:8px 0;">
+          <span class="ab red" style="font-size:18px; line-height:1;">—</span>
+          <span style="font-size:12px; font-weight:300; color:#333;">Distributed systems</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- right: statement + highlight -->
+    <div style="flex:1; padding:20px 26px;">
+      <div class="label" style="margin-bottom:14px;">Manifesto</div>
+      <div class="ab" style="font-size:22px; line-height:1.25; letter-spacing:-0.025em; color:#1a1a1a; margin-bottom:18px;">
+        "Building AI systems that think, trade, defend, and review —&nbsp;so you don't have to."
+      </div>
+      <div style="font-size:13px; font-weight:300; color:#666; line-height:1.95; margin-bottom:20px;">
+        I work at the intersection of applied AI and real-world systems. From agentic code reviewers to autonomous privacy enforcement platforms, the goal is the same: build something that actually does the job without hand-holding. I like problems where the solution is uncomfortable to build.
+      </div>
+
+      <!-- research highlight card -->
+      <div style="border:2.5px solid #1a1a1a; background:#1a1a1a; display:flex; gap:0; overflow:hidden;">
+        <div style="background:#e8272b; padding:0 14px; display:flex; align-items:center; justify-content:center; min-width:48px;">
+          <span class="ab" style="font-size:22px; color:#f7f3ee;">★</span>
+        </div>
+        <div style="padding:12px 16px;">
+          <div class="label" style="color:#555; margin-bottom:5px;">Research Highlight</div>
+          <div style="font-size:12px; color:#ccc; font-weight:300; line-height:1.8;">
+            Used <span style="color:#f7f3ee; font-weight:400;">satellite imagery + ML</span> to predict urban flooding in Bangalore — processing geospatial raster data to generate flood-risk zone maps before events unfold.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION: FEATURED WORK ────────────────────────────────── -->
+  <div class="sec-bar">
+    <div class="sec-bar-title">Featured Work</div>
+    <div class="sec-bar-line"></div>
+    <div class="label">3 Projects · Active</div>
+  </div>
+
+  <!-- ── PROJECT 01: VELOCIS (full width) ──────────────────────── -->
+  <div style="padding:26px; border-bottom:2.5px solid #1a1a1a; position:relative; overflow:hidden;">
+    <div class="proj-ghost" style="font-size:180px; right:-20px; top:-30px;">01</div>
+
+    <div style="position:relative;">
+      <!-- header row -->
+      <div class="flex" style="align-items:flex-start; gap:18px; margin-bottom:20px;">
+        <div class="proj-num" style="font-size:70px;">01</div>
+        <div style="padding-top:10px; flex:1;">
+          <div class="label" style="margin-bottom:5px;">Code Review Automation · TypeScript · GenAI</div>
+          <div class="proj-name" style="font-size:34px; line-height:1;">Velocis</div>
+        </div>
+        <div style="padding-top:14px; display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
+          <span class="tag-dark">Active</span>
+          <a href="https://github.com/RJScripts-24/Velocis" class="proj-link">github.com/Velocis →</a>
+        </div>
+      </div>
+
+      <!-- tagline -->
+      <div style="font-size:17px; font-weight:500; color:#1a1a1a; margin-bottom:14px; line-height:1.45; max-width:680px;">
+        AI senior engineer embedded in your repo — it reads the diff, questions the logic, and enforces your team's standards without being asked.
+      </div>
+
+      <!-- body copy split into 2 cols -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:20px;">
+        <div style="font-size:12.5px; font-weight:300; color:#666; line-height:1.9;">
+          Velocis plugs into your GitHub workflow as a virtual senior engineer. It understands your codebase context, reads every pull request fully, and returns actionable feedback — not surface-level linting warnings but real engineering critique: logic bugs, architectural drift, unhandled edge cases, naming that lies.
+        </div>
+        <div style="font-size:12.5px; font-weight:300; color:#666; line-height:1.9;">
+          It's less a bot and more the dev on your team who actually reads the diff before commenting. It integrates via webhooks and GitHub Actions, meaning zero additional tooling in your flow. The feedback arrives in the PR thread like any other reviewer.
+        </div>
+      </div>
+
+      <!-- feature pills row -->
+      <div class="flex" style="gap:8px; margin-bottom:20px; flex-wrap:wrap;">
+        <div class="mini-stat">
+          <div class="mini-stat-val accent">Auto</div>
+          <div class="label" style="margin-top:3px; font-size:9px;">PR Review</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat-val">Context</div>
+          <div class="label" style="margin-top:3px; font-size:9px;">Aware</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat-val">GitHub</div>
+          <div class="label" style="margin-top:3px; font-size:9px;">Native</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat-val accent">Zero</div>
+          <div class="label" style="margin-top:3px; font-size:9px;">Extra Tooling</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-stat-val">24/7</div>
+          <div class="label" style="margin-top:3px; font-size:9px;">On-call</div>
+        </div>
+      </div>
+
+      <!-- tags -->
+      <div>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">GitHub API</span>
+        <span class="tag">OpenAI</span>
+        <span class="tag">Webhooks</span>
+        <span class="tag">GitHub Actions</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROJECTS 02 + 03: side by side ────────────────────────── -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; border-bottom:2.5px solid #1a1a1a;">
+
+    <!-- PROJECT 02: QUANTIS -->
+    <div style="padding:24px; border-right:2.5px solid #1a1a1a; position:relative; overflow:hidden;">
+      <div class="proj-ghost" style="font-size:130px; right:-14px; top:-18px;">02</div>
+      <div style="position:relative;">
+        <div class="flex" style="align-items:flex-end; gap:12px; margin-bottom:16px;">
+          <div class="proj-num" style="font-size:52px;">02</div>
+          <div>
+            <div class="label" style="margin-bottom:4px;">Next.js · Python · Groq · Binance</div>
+            <div class="proj-name" style="font-size:26px; line-height:1;">Quantis</div>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:14px;">
+          <div style="font-size:14px; font-weight:500; color:#1a1a1a; line-height:1.45;">
+            Build, backtest & run crypto strategies — with an AI coach watching your every move.
+          </div>
+          <span class="tag-dark" style="flex-shrink:0; margin-top:2px;">Active</span>
+        </div>
+
+        <div style="font-size:12px; font-weight:300; color:#666; line-height:1.9; margin-bottom:12px;">
+          Full-stack crypto algorithmic trading simulator with a Monaco-powered in-browser strategy editor. Connect it to real Binance market data, run backtests across historical windows, and get Groq-powered AI coaching that explains exactly why your strategy is losing money.
+        </div>
+        <div style="font-size:12px; font-weight:300; color:#666; line-height:1.9; margin-bottom:18px;">
+          The AI coach doesn't just analyse performance metrics — it reads your strategy code and identifies logical flaws, overfitting patterns, and risk exposure you probably didn't account for. Deployed on Cloudflare edge for sub-30ms global latency.
+        </div>
+
+        <!-- stat pills -->
+        <div class="flex" style="gap:6px; margin-bottom:18px;">
+          <div class="mini-stat">
+            <div class="mini-stat-val accent" style="font-size:13px;">Live</div>
+            <div class="label" style="margin-top:3px; font-size:9px;">Market Data</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-val" style="font-size:13px;">Monaco</div>
+            <div class="label" style="margin-top:3px; font-size:9px;">Code Editor</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-val" style="font-size:13px;">Edge</div>
+            <div class="label" style="margin-top:3px; font-size:9px;">Deployed</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:12px;">
+          <span class="tag">Next.js</span>
+          <span class="tag">Python</span>
+          <span class="tag">Groq</span>
+          <span class="tag">Binance API</span>
+          <span class="tag">Cloudflare</span>
+          <span class="tag">Monaco</span>
+        </div>
+        <a href="https://github.com/NA0XY/Quantis" class="proj-link">github.com/Quantis →</a>
+      </div>
+    </div>
+
+    <!-- PROJECT 03: DATAREAPER -->
+    <div style="padding:24px; position:relative; overflow:hidden;">
+      <div class="proj-ghost" style="font-size:130px; right:-14px; top:-18px;">03</div>
+      <div style="position:relative;">
+        <div class="flex" style="align-items:flex-end; gap:12px; margin-bottom:16px;">
+          <div class="proj-num" style="font-size:52px;">03</div>
+          <div>
+            <div class="label" style="margin-bottom:4px;">FastAPI · React · Playwright · Groq</div>
+            <div class="proj-name" style="font-size:26px; line-height:1;">DataReaper</div>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:14px;">
+          <div style="font-size:14px; font-weight:500; color:#1a1a1a; line-height:1.45;">
+            Autonomous AI-powered privacy defense — it hunts your exposed data and forces deletion.
+          </div>
+          <span class="tag-dark" style="flex-shrink:0; margin-top:2px;">Active</span>
+        </div>
+
+        <div style="font-size:12px; font-weight:300; color:#666; line-height:1.9; margin-bottom:12px;">
+          DataReaper scans the web for your exposed personal data using advanced OSINT techniques and AI-powered identity resolution. It doesn't flag findings and stop there — it automates the full GDPR, CCPA, and DPDP legal workflows to force deletion from data brokers, people-search engines, and aggregators.
+        </div>
+        <div style="font-size:12px; font-weight:300; color:#666; line-height:1.9; margin-bottom:18px;">
+          No lawyers, no manual opt-out forms. Playwright handles the browser automation, Groq drives the identity resolution, and PostgreSQL tracks every deletion status. It treats your privacy like a system invariant that must be maintained.
+        </div>
+
+        <!-- stat pills -->
+        <div class="flex" style="gap:6px; margin-bottom:18px;">
+          <div class="mini-stat">
+            <div class="mini-stat-val accent" style="font-size:13px;">OSINT</div>
+            <div class="label" style="margin-top:3px; font-size:9px;">Powered</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-val" style="font-size:13px;">GDPR</div>
+            <div class="label" style="margin-top:3px; font-size:9px;">Automated</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-val" style="font-size:13px;">Auto</div>
+            <div class="label" style="margin-top:3px; font-size:9px;">Deletion</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:12px;">
+          <span class="tag">FastAPI</span>
+          <span class="tag">React</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">Groq</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+        <a href="https://github.com/NA0XY/DataReaper" class="proj-link">github.com/DataReaper →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION: TECH STACK ───────────────────────────────────── -->
+  <div class="sec-bar">
+    <div class="sec-bar-title">Tech Stack</div>
+    <div class="sec-bar-line"></div>
+    <div class="label">5 Categories</div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(5,1fr); border-bottom:2.5px solid #1a1a1a;">
+    <div class="stack-col">
+      <div class="label" style="margin-bottom:10px;">Languages</div>
+      <div class="stack-item"><span class="stack-dot"></span>TypeScript</div>
+      <div class="stack-item"><span class="stack-dot"></span>JavaScript</div>
+      <div class="stack-item"><span class="stack-dot"></span>Python</div>
+      <div class="stack-item"><span class="stack-dot"></span>C++</div>
+    </div>
+    <div class="stack-col">
+      <div class="label" style="margin-bottom:10px;">Frontend</div>
+      <div class="stack-item"><span class="stack-dot"></span>React</div>
+      <div class="stack-item"><span class="stack-dot"></span>Next.js</div>
+      <div class="stack-item"><span class="stack-dot"></span>Tailwind CSS</div>
+      <div class="stack-item"><span class="stack-dot"></span>HTML5</div>
+    </div>
+    <div class="stack-col">
+      <div class="label" style="margin-bottom:10px;">Backend</div>
+      <div class="stack-item"><span class="stack-dot"></span>Node.js</div>
+      <div class="stack-item"><span class="stack-dot"></span>Express</div>
+      <div class="stack-item"><span class="stack-dot"></span>FastAPI</div>
+      <div class="stack-item"><span class="stack-dot"></span>PostgreSQL</div>
+      <div class="stack-item"><span class="stack-dot"></span>Redis</div>
+    </div>
+    <div class="stack-col">
+      <div class="label" style="margin-bottom:10px;">AI / ML</div>
+      <div class="stack-item"><span class="stack-dot"></span>PyTorch</div>
+      <div class="stack-item"><span class="stack-dot"></span>TensorFlow</div>
+      <div class="stack-item"><span class="stack-dot"></span>scikit-learn</div>
+      <div class="stack-item"><span class="stack-dot"></span>LangChain</div>
+      <div class="stack-item"><span class="stack-dot"></span>RAG</div>
+    </div>
+    <div class="stack-col">
+      <div class="label" style="margin-bottom:10px;">Infra &amp; Tools</div>
+      <div class="stack-item"><span class="stack-dot"></span>Docker</div>
+      <div class="stack-item"><span class="stack-dot"></span>Git</div>
+      <div class="stack-item"><span class="stack-dot"></span>GitHub Actions</div>
+      <div class="stack-item"><span class="stack-dot"></span>Cloudflare</div>
+      <div class="stack-item"><span class="stack-dot"></span>Linux</div>
+    </div>
+  </div>
+
+  <!-- ── SECTION: GITHUB STATS ─────────────────────────────────── -->
+  <div class="sec-bar">
+    <div class="sec-bar-title">GitHub Activity</div>
+    <div class="sec-bar-line"></div>
+    <div class="label">Live</div>
+  </div>
+
+  <!-- quick number stats -->
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); border-bottom:2.5px solid #1a1a1a;">
+    <div style="padding:18px 20px; border-right:2.5px solid #1a1a1a;">
+      <div class="ab" style="font-size:44px; line-height:1; letter-spacing:-0.03em; color:#e8272b;">3</div>
+      <div class="label" style="margin-top:5px;">Flagship Projects</div>
+    </div>
+    <div style="padding:18px 20px; border-right:2.5px solid #1a1a1a;">
+      <div class="ab" style="font-size:44px; line-height:1; letter-spacing:-0.03em; color:#1a1a1a;">5+</div>
+      <div class="label" style="margin-top:5px;">Languages</div>
+    </div>
+    <div style="padding:18px 20px; border-right:2.5px solid #1a1a1a;">
+      <div class="ab" style="font-size:44px; line-height:1; letter-spacing:-0.03em; color:#1a1a1a;">10+</div>
+      <div class="label" style="margin-top:5px;">Frameworks Used</div>
+    </div>
+    <div style="padding:18px 20px;">
+      <div class="ab" style="font-size:44px; line-height:1; letter-spacing:-0.03em; color:#e8272b;">∞</div>
+      <div class="label" style="margin-top:5px;">PRs Auto-Reviewed</div>
+    </div>
+  </div>
+
+  <!-- GitHub image cards -->
+  <div style="padding:18px 20px; border-bottom:2.5px solid #1a1a1a; background:#f0ece3; display:flex; gap:14px; flex-wrap:wrap; align-items:flex-start;">
+    <img
+      src="https://github-readme-stats.vercel.app/api?username=NA0XY&show_icons=true&hide_border=true&bg_color=f0ece3&title_color=1a1a1a&text_color=666666&icon_color=e8272b&ring_color=e8272b"
+      alt="GitHub Stats"
+      style="height:155px; border:2.5px solid #1a1a1a; display:block;"
+    >
+    <img
+      src="https://streak-stats.demolab.com/?user=NA0XY&theme=default&background=f0ece3&border=1a1a1a&ring=e8272b&fire=e8272b&currStreakLabel=1a1a1a&sideLabels=888888&dates=888888"
+      alt="GitHub Streak"
+      style="height:155px; border:2.5px solid #1a1a1a; display:block;"
+    >
+    <img
+      src="https://github-readme-stats.vercel.app/api/top-langs/?username=NA0XY&layout=compact&hide_border=true&bg_color=f0ece3&title_color=1a1a1a&text_color=666666"
+      alt="Top Languages"
+      style="height:155px; border:2.5px solid #1a1a1a; display:block;"
+    >
+  </div>
+
+  <!-- contribution snake -->
+  <div style="padding:16px 20px; border-bottom:2.5px solid #1a1a1a; background:#f0ece3; text-align:center;">
+    <div class="label" style="margin-bottom:10px; text-align:left;">Contribution Activity</div>
+    <img
+      src="https://raw.githubusercontent.com/NA0XY/NA0XY/output/github-snake-dark.svg"
+      alt="Contribution Snake"
+      style="width:100%; border:2.5px solid #1a1a1a; display:block;"
+    >
+  </div>
+
+  <!-- ── SECTION: CONNECT ──────────────────────────────────────── -->
+  <div class="sec-bar">
+    <div class="sec-bar-title">Let's Connect</div>
+    <div class="sec-bar-line"></div>
+  </div>
+
+  <!-- contact block -->
+  <div class="flex">
+    <!-- statement -->
+    <div style="flex:1; padding:24px 26px; border-right:2.5px solid #1a1a1a;">
+      <div class="ab" style="font-size:30px; line-height:1.2; letter-spacing:-0.025em; color:#1a1a1a; margin-bottom:14px;">
+        Let's build something<br><span style="color:#e8272b;">worth shipping.</span>
+      </div>
+      <div style="font-size:13px; font-weight:300; color:#777; line-height:1.9; margin-bottom:20px;">
+        Open to collaborations, side projects, and conversations about AI-powered systems that actually do something useful. If you have a hard problem and a bias for action, let's talk.
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <span class="tag">AI / ML</span>
+        <span class="tag">Dev Infrastructure</span>
+        <span class="tag">Privacy Tech</span>
+        <span class="tag">Trading Systems</span>
+        <span class="tag">Open Source</span>
+      </div>
+    </div>
+    <!-- links -->
+    <div style="padding:24px 26px; min-width:260px; display:flex; flex-direction:column; justify-content:center;">
+      <div class="label" style="margin-bottom:14px;">Reach out</div>
+      <a href="mailto:harshsinghal1972@gmail.com" class="contact-link">
+        <span class="contact-arrow">→</span>
+        harshsinghal1972@gmail.com
+      </a>
+      <a href="https://linkedin.com/in/harshsinghal04" class="contact-link">
+        <span class="contact-arrow">→</span>
+        linkedin.com/in/harshsinghal04
+      </a>
+      <a href="https://github.com/NA0XY" class="contact-link">
+        <span class="contact-arrow">→</span>
+        github.com/NA0XY
+      </a>
+    </div>
+  </div>
+
+  <!-- ── FOOTER BAR ────────────────────────────────────────────── -->
+  <div style="background:#1a1a1a; padding:11px 22px; display:flex; justify-content:space-between; align-items:center; border-top:2.5px solid #1a1a1a;">
+    <div class="ab" style="font-size:13px; color:#f7f3ee; letter-spacing:0.04em;">HARSH SINGHAL</div>
+    <div class="mono" style="font-size:10px; color:#555; letter-spacing:0.08em;">GENAI · FULLSTACK · ML · 2025</div>
+    <div class="mono" style="font-size:10px; color:#555; letter-spacing:0.06em;">BENGALURU, INDIA</div>
+  </div>
+
+</div>
+</body>
+</html>
