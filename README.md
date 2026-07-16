@@ -12,10 +12,3 @@ Exact styled version (HTML/CSS):
 
 </div>
 
----
-
-This repository hosts the fully styled profile page via GitHub Pages.
-
-- Source file: `docs/index.html`
-- Publish URL (project pages): `https://na0xy.github.io/NA0XY/`
-
